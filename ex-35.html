@@ -1,0 +1,81 @@
+<!-- یک دستور شرطی جاوا اسکریپت برای مرتب کردن سه عدد بنویسید. یک جعبه هشدار برای نمایش نتایج نمایش داده شود. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="ex-35.css" >
+
+</head>
+
+<body>
+
+    <div>
+
+        <p>
+
+            <label for="numbers">Enter three numbers separated by commas :</label>
+
+            <input type="text" id="numbers">
+
+        </p>
+
+        <button onclick="output()">Sort the numbers from largest to smallest  </button>
+
+    </div>
+
+    <script>
+
+        function output() {
+
+            let numbers = document.getElementById("numbers").value.split(",")
+
+            let a = numbers[0];
+            let b = numbers[1];
+            let c = numbers[2];
+
+            if (a > b && a > c) {
+
+                if (b > c) {
+                    window.alert(a + "," + b + "," + c);
+                }
+
+                if (c > b) {
+                    window.alert(a + "," + c + "," + b);
+                }
+
+            }
+
+            if (b > a && b > c) {
+
+                if (a > c) {
+                    window.alert(b + "," + a + "," + c);
+                }
+
+                if (c > a) {
+                    window.alert(b + "," + c + "," + a);
+                }
+
+            }
+
+            if (c > a && c > b) {
+
+                if (a > b) {
+                    window.alert(c + "," + a + "," + b);
+                }
+
+                if (b > a) {
+                    window.alert(c + "," + b + "," + a);
+                }
+
+            }
+
+
+        }
+
+    </script>
+
+</body>
+
+</html>
